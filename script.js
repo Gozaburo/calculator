@@ -133,7 +133,10 @@ operators.forEach( (operator) => {
             operations.pop();
             let trueResult = parseFloat(result.toFixed(12)).toString();
             if (Number(trueResult) > 1000000000) {
-                trueResult = Number(trueResult).toExponential(8).toString();
+                trueResult = Number(trueResult).toExponential(6).toString();
+            }
+            if (trueResult.length > 12) {
+                trueResult = Number(trueResult).toPrecision(12).toString();
             }
             operations.push(trueResult);
             display.textContent = trueResult;
@@ -148,7 +151,10 @@ operators.forEach( (operator) => {
             operations.pop();
             let trueResult = parseFloat(result.toFixed(12)).toString();
             if (Number(trueResult) > 1000000000) {
-                trueResult = Number(trueResult).toExponential(8).toString();
+                trueResult = Number(trueResult).toExponential(6).toString();
+            }
+            if (trueResult.length > 12) {
+                trueResult = Number(trueResult).toPrecision(12).toString();
             }
             operations.push(trueResult);
             display.textContent = trueResult;
@@ -160,7 +166,10 @@ operators.forEach( (operator) => {
             operations.pop();
             let trueResult = parseFloat(result.toFixed(12)).toString();
             if (Number(trueResult) > 1000000000) {
-                trueResult = Number(trueResult).toExponential(8).toString();
+                trueResult = Number(trueResult).toExponential(6).toString();
+            }
+            if (trueResult.length > 12) {
+                trueResult = Number(trueResult).toPrecision(12).toString();
             }
             operations.push(trueResult);
             display.textContent = trueResult;
@@ -196,7 +205,10 @@ equals.addEventListener('click', () => {
         operations.pop();
         let trueResult = parseFloat(result.toFixed(12)).toString();
         if (Number(trueResult) > 1000000000) {
-            trueResult = Number(trueResult).toExponential(8).toString();
+            trueResult = Number(trueResult).toExponential(6).toString();
+        }
+        if (trueResult.length > 12) {
+            trueResult = Number(trueResult).toPrecision(12).toString();
         }
         operations.push(trueResult);
         const display = document.querySelector("#display");
@@ -227,7 +239,10 @@ equals.addEventListener('click', () => {
             operations.pop();
             let trueResult = parseFloat(secondRes.toFixed(12)).toString();
             if (Number(trueResult) > 1000000000) {
-                trueResult = Number(trueResult).toExponential(8).toString();
+                trueResult = Number(trueResult).toExponential(6).toString();
+            }
+            if (trueResult.length > 12) {
+                trueResult = Number(trueResult).toPrecision(12).toString();
             }
             operations.push(trueResult);
             const display = document.querySelector("#display");
